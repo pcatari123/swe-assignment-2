@@ -1,5 +1,3 @@
-//This file with create a CI/CD pipeline for building and deploying the dcoker image to k8 cluster using Github as source control version.
-
 pipeline{
     agent any
     environment {
@@ -8,6 +6,7 @@ pipeline{
 	}
 
     stages{
+        
         stage('Building the war image') {
             steps {
                 script {
@@ -25,8 +24,7 @@ pipeline{
  	   stage('Pushing latest code to Docker Hub') {
             steps {
                 script {
-                        sh 'docker push srikar430/studentsurvey645:$(BUILD_TIMESTAMP)'
-                    }
+                    sh 'docker push srikar430/studentsurvey645:$(BUILD_TIMESTAMP)'
                 }
             }
         }
@@ -36,7 +34,7 @@ pipeline{
                script{
                   sh 'kubectl set image deployment/d3 container-0=srikar430/studentsurvey645:$(BUILD_TIMESTAMP) -n jenkins-pipeline'
                   sh 'kubectl set image deployment/d-lb container-0=srikar430/studentsurvey645:$(BUILD_TIMESTAMP) -n jenkins-pipeline'
-               }
+                }
             }
         }
     }
