@@ -26,7 +26,7 @@ pipeline{
  	   stage('Pushing latest code to Docker Hub') {
             steps {
                 script {
-                        sh 'docker push 'srikar430/studentsurvey645:$(BUILD_TIMESTAMP)'
+                        sh 'docker push srikar430/studentsurvey645:$(BUILD_TIMESTAMP)'
                     }
                 }
             }
