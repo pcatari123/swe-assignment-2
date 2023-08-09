@@ -1,0 +1,256 @@
+<!-- CS 645 - Assignment 1 
+     Pramod Kumar Catari
+     G01398498
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Feedback Survey Form</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="javascript" href="./bootstrap.min.js">
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="assets/media/stylesheets/survey.css" />
+  </head>
+  <body>
+    <!-- Header contains GMU logo and Home page link  -->
+    <header class="flex p-4">
+      <div class="container-fluid d-flex flex-row justify-content-between">
+        <img src="assets/media/images/CS-dept-logo.png" alt="CS department logo">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="./index.html">Home</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </header>
+    <main class="container">
+      <!-- Survey Form -->
+      <form action="index.html" autocomplete="on" method="post">
+        <h2 class="shadow-lg p-3 mb-4 rounded">Students Survey Form</h2>
+        <p class="pt-2 pb-2">(Required fields are indicated by a <span class="star">*</span> mark )</p>
+        <fieldset>
+          <!-- Text boxes for first name, last name, street address, city, state, zip, telephone number, e-mail, 
+            and date of survey, which are required fields. -->
+          <div>
+            <label class="pt-2" for="name">Name : <span class="star">*</span></label>
+            <br />
+            <input
+              class="sub"
+              id="name"
+              type="text"
+              name="fname"
+              placeholder="First Name"
+              autofocus
+              required
+              style="width: 100%;"
+              autofocus="autofocus"
+            />
+            <input
+              class="sub"
+              id="name"
+              type="text"
+              name="lname"
+              placeholder="Last Name"
+              style="width: 100%;"
+              required
+            />
+          </div>
+          <div>
+            <label class="pt-2" for="Address">Address : <span class="star">*</span></label><br />
+            <input
+              class="sub"
+              id="Street"
+              type="Address"
+              placeholder="Street"
+              required
+            />
+            <input
+              class="sub"
+              id="City"
+              type="Address"
+              placeholder="City"
+              required
+            />
+            <input
+              class="sub"
+              id="State"
+              type="Address"
+              placeholder="State"
+              required
+            />
+            <input
+              class="sub"
+              id="Zipcode"
+              type="number"
+              placeholder="Zipcode"
+              required
+            />
+          </div>
+          <div>
+            <label class="pt-2" for="contact">Contact : <span class="star">*</span></label><br />
+            <input
+              class="sub"
+              id="Email"
+              type="email"
+              name="email"
+              placeholder="example@mailbox.com"
+              required
+            />
+            <input
+              class="sub"
+              id="Phone-Number"
+              type="number"
+              name="phone"
+              placeholder="Phone-Number"
+              required
+            />
+          </div>
+          <div>
+            <label class="pt-2" for="DOS">Date of Survey : </label>
+            <input class="sub" id="DOS" type="date" name="DOS" style="width: 100%;" required />
+          </div>
+          <!--Checkboxes that allow prospective students to indicate what they liked most about the campus. 
+            The checkboxes should include: students, location, campus, atmosphere, dorm rooms, and sports.  -->
+          <div class="checkbox pt-2">
+            <label>What you liked most about the campus?</label><br />
+            <input id="students" type="checkbox" placeholder="v" />
+            <label for="students">students</label>
+            <input id="location" type="checkbox" placeholder="w" />
+            <label for="location">location</label>
+            <input id="campus" type="checkbox" placeholder="x" />
+            <label for="campus">campus</label>
+            <input id="atmosphere" type="checkbox" placeholder="y" />
+            <label for="atmosphere">atmosphere</label>
+            <input id="dorm rooms" type="checkbox" placeholder="z" />
+            <label for="dorm rooms">dorm rooms</label>
+            <input id="sports" type="checkbox" placeholder="A" />
+            <label for="sports">sports</label>
+          </div>
+          <!-- Radio buttons that allow the prospective students to indicate how they became interested in the
+             university. Options should include: friends, television, Internet, and other. -->
+          <div class="radio pt-2">
+            <label>How did you become interested in the university</label><br />
+            <input name="Radio" id="Friends" type="radio" />
+            <label for="Friends">Friends</label>
+            <input name="Radio" id="Television" type="radio" />
+            <label for="Television">Television</label>
+            <input name="Radio" id="Internet" type="radio" />
+            <label for="Internet">Internet</label>
+            <input name="Radio" id="Other" type="radio" />
+            <label for="Other">Other</label>
+          </div>
+          <!-- A dropdown list of options for the user to select the likelihood of him/her recommending this school to
+             other prospective students. The three options of the dropdown list are: Very Likely, Likely, Unlikely. -->
+          <div class="pt-2">
+            <label for="recommend"
+              >How likely would you recommending this school? (Choose an option from the drop down below)</label
+            >
+            <select class="form-control mb-2" name="recommend" id="">
+              <option value="">Very Likely</option>
+              <option value="">Likely</option>
+              <option value="">Unlikely</option>
+            </select>
+          </div>
+
+          <!-- An additional text box called Raffle. The user will be asked to enter at least ten comma separated 
+            numbers ranging from 1 through100 in the Raffle field. This information will be used to announce 
+            whether the student wins a free movie ticket. -->
+          <div>
+            <label class="pt-2" for="Raffle"
+              >Enter at least ten comma separated numbers ranging from 1
+              through100 in the Raffle field</label
+            >
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Raffle"
+              name="Raffle"
+            />
+          </div>
+
+          <!-- A text area for additional comments -->
+          <div>
+            <label class="pt-2" for="comments">Additional Comments</label>
+            <textarea
+              class="form-control"
+              name="Comments"
+              placeholder="Comments"
+              id="Comments"
+              cols="40"
+              rows="5"
+            ></textarea>
+          </div>
+          <!-- Using the datalist feature, enable the user to select high-school graduation month (January through December), followed by a text field for year. -->
+          <div class="">
+            <label class="pt-2" for="Month">High-school graduation Month</label><br />
+            <input
+              list="Month"
+              id="Months"
+              class="sub flex"
+              placeholder="Month"
+              name="Month"
+              style="width: 100%;"
+              required
+            />
+            <datalist id="Month">
+              <option value="January"></option>
+              <option value="February"></option>
+              <option value="March"></option>
+              <option value="April"></option>
+              <option value="May"></option>
+              <option value="June"></option>
+              <option value="July"></option>
+              <option value="August"></option>
+              <option value="September"></option>
+              <option value="October"></option>
+              <option value="November"></option>
+              <option value="December"></option>
+            </datalist>
+            <label class="pt-2" for="Year">High-school graduation Year</label><br />
+            <input
+              list="Year"
+              id="Years"
+              class="sub"
+              placeholder="Year"
+              name="Year"
+              style="width: 100%;" 
+              required
+            />
+            <datalist id="Year">
+              <option value="2015"></option>
+              <option value="2016"></option>
+              <option value="2017"></option>
+              <option value="2018"></option>
+              <option value="2019"></option>
+              <option value="2020"></option>
+              <option value="2021"></option>
+              <option value="2022"></option>
+              <option value="2023"></option>
+            </datalist>
+          </div>
+
+          <!-- Submit and cancel buttons -->
+          <div class="flex">
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <small>&copy; Pramod Kumar Catari | G01398498 | 2023</small>
+    </footer>
+  </body>
+</html>

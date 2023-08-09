@@ -1,0 +1,296 @@
+/*
+CS 645 - Assignment 1 
+Pramod Kumar Catari
+G01398498
+*/
+
+
+/* CSS Resets */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* CUSTOM DESIGN*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --basic: rgb(255, 255, 255);
+  --primary: #006633;
+  --secondary: #000000;
+  --tertiary: #ffcc33;
+  --background: #82828184;
+}
+body {
+  line-height: 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: var(--secondary);
+  height: 100%;
+  background-color: var(--background);
+}
+header {
+  background-image: linear-gradient(to right, var(--primary), var(--tertiary));
+  position: sticky;
+  font-family: 'Times New Roman', Times, serif;
+  top: 0;
+}
+
+header img{
+  height: 3rem;
+  filter: invert(100%);
+}
+
+h1 {
+  color: var(--basic);
+  font-size: 32px;
+  font-weight: 600;
+  margin: 10px 20px;
+  padding: 5px;
+  border: solid 2px var(--tertiary);
+  border-radius: 20px;
+}
+h2 {
+  font-size: 24px;
+  color: var(--primary);
+  text-align: center;
+  width: 100%;
+  border: solid var(--primary) 5px;
+  text-shadow: 1px 1px var(--secondary);
+}
+
+.nav {
+  display: inline-block;
+}
+
+ul.nav.navbar-nav {
+  padding: 10px;
+  display: inline-block;
+}
+
+li.active {
+  display: inline-block;
+  padding: 0px 14px;
+  vertical-align: top;
+}
+
+li.active a {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Open Sans',Verdana,Geneva,sans-serif;
+  text-decoration: none;
+}
+
+li.active a:hover {
+  text-decoration: none;
+  padding: 1px 1px;
+  color: var(--secondary);
+}
+
+.form-control {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  outline: 0;
+  margin-top: 10px;
+  box-shadow: 0 0 0 1.5px rgba(43, 136, 83, 0.2);
+}
+.sub {
+  width: 48%;
+  height: 100%;
+  padding: 8px;
+  border: 0;
+  display: inline;
+  outline: 0;
+  margin: 10px 5px;
+  box-shadow: 0 0 0 1.5px rgba(43, 136, 83, 0.2);
+}
+[required]::before {
+  content: '*';
+  color: red;
+  /* float: right; */
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form {
+  border: 2px solid var(--primary);
+  padding: 20px;
+  background-color: rgba(43, 136, 83, 0.2);
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.checkbox input,
+.radio input {
+  margin-left: 25px;
+}
+
+button {
+  font-size: 18px;
+  width: 48%;
+  text-align: center;
+  display: inline-block;
+  color: var(--secondary);
+  background-color: var(--basic);
+  padding: 8px;
+  margin: 40px 0;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+}
+button:hover {
+  color: var(--basic);
+  background-color: var(--primary);
+}
+.star{
+    color: red;
+}
+footer {
+  height: 2rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to right, var(--tertiary), var(--primary));
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--basic);
+  text-align: center;
+}

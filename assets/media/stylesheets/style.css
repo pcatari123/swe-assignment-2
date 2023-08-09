@@ -1,0 +1,296 @@
+/*
+CS 645 - Assignment 1 
+Pramod Kumar Catari
+G01398498
+*/
+
+
+/* CSS Resets */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CUSTOM STYLES*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+    --basic: rgb(255, 255, 255);
+    --primary: #141ea9;
+    --secondary: #000000;
+    --tertiary: #33ff92;
+    --background: #33532984;
+}
+main{
+  height: 90vh;
+}
+.landing-body {
+  line-height: 1.5;
+  height: 100vh;
+  height: 100%;
+  background-color: rgba(50, 94, 155, 0.2);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: var(--secondary);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header{
+    background-image: linear-gradient(to right, var(--primary), var(--tertiary));
+    color: var(--basic);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.intro-heading {
+  font-size: 48px;
+  font-weight: 700;
+  padding: 10px 0;
+  color: var(--primary);
+  text-shadow: 2px 2px rgba(43, 136, 83, 0.2);
+}
+h2 {
+  color: var(--basic);
+  text-shadow: 3px rgb(255, 106, 0);
+  font-size: 32px;
+  font-weight: 600;
+  margin: 10px 20px;
+  padding: 8px;
+  border-radius: 20px;
+}
+header {
+  padding: 0.6rem;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.nav {
+  display: inline-block;
+}
+
+ul.nav.navbar-nav {
+  padding: 10px;
+  display: inline-block;
+}
+
+li.active {
+  display: inline-block;
+  padding: 0px 14px;
+  vertical-align: top;
+}
+
+li.active a {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Open Sans',Verdana,Geneva,sans-serif;
+  text-decoration: none;
+}
+
+li.active a:hover {
+  text-decoration: none;
+  padding: 1px 1px;
+  color: var(--secondary);
+}
+
+.img {
+  margin: 4rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 3px solid var(--primary);
+  height: 500px;
+  object-fit: cover;
+}
+
+article p {
+  padding-bottom: 20px;
+}
+.footer {
+  height: 2rem;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--primary);
+  color: var(--background);
+  text-align: center;
+}
+ol label{
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+ol li {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+.footer{
+    height: 2rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to right, var(--tertiary), var(--primery));
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--basic);
+  text-align: center;
+}
+
+/* Error Page styles */
+.error-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+  font-size: 4rem;
+  height: 100vh;
+  background-color: rgb(208, 211, 213);
+}
+.error-header{
+  background-color: rgb(208, 211, 213);
+  border: 0.5px solid black;
+}
+
+.error-header h2 {
+  color: var(--secondary);
+}
+
+.center {
+  text-align: center;
+}
+
