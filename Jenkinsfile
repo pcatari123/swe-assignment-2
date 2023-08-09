@@ -15,9 +15,9 @@ pipeline{
                     sh 'rm -rf *.war'
                     sh 'jar -cvf swe645-assignment-1.war .'
                     sh 'echo $(BUILD_TIMESTAMP)'
-                    sh 'docker login -u srikar430 -p $(DOCKERHUB_PASS)' 
+                    sh 'docker login -u $DOCKERHUB_PASS_USR -p $DOCKERHUB_PASS_PSW' 
                     docker.withRegistry('',registryCredential){
-                    def img = docker.build('srikar430/studentsurvey645:$(BUILD_TIMESTAMP)')
+                    sh 'docker build -t srikar430/studentsurvey645:$(BUILD_TIMESTAMP) .'
                 }
                     
             }
