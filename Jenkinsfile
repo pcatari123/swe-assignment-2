@@ -3,6 +3,7 @@ pipeline{
     environment {
 
 	    DOCKERHUB_PASS = credentials('srikar430')
+	    h 'echo "Credentials"'
 	}
 
     stages{
@@ -10,6 +11,7 @@ pipeline{
        stage('Building the war image') {
             steps {
                 script {
+		    h 'echo "Checkout..."'	
                     checkout scm
                     sh 'rm -rf *.war'
                     sh 'jar -cvf swe645-assignment-1.war .'
