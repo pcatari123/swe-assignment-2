@@ -3,7 +3,7 @@ pipeline{
     environment {
 
 	    DOCKERHUB_PASS = credentials('srikar430')
-	    sh 'echo "Credentials"'
+	    sh "echo 'Credentials'"
 	}
 
     stages{
