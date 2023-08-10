@@ -3,7 +3,6 @@ pipeline{
     environment {
 
 	    DOCKERHUB_PASS = credentials('srikar430')
-	    sh "echo 'Credentials'"
 	}
 
     stages{
@@ -13,6 +12,7 @@ pipeline{
                 script {
 		    sh 'echo "Checkout..."'	
                     checkout scm
+		    sh 'echo "Checkout success..."'
                     sh 'rm -rf *.war'
                     sh 'jar -cvf swe645-assignment-1.war .'
                     sh 'echo $(BUILD_TIMESTAMP)'
