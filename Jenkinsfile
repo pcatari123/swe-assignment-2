@@ -7,18 +7,7 @@ pipeline{
 
     stages{
         
-        stage('Building the war image') {
-            steps {
-                script {
-                    checkout scm
-                    sh 'rm -rf *.war'
-                    sh 'jar -cvf swe645-assignment-1.war .'
-                    sh 'echo $(BUILD_TIMESTAMP)'
 
-                }
-                    
-            }
-        }
  
  	   stage('Pushing latest code to Docker Hub') {
             steps {
