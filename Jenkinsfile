@@ -1,4 +1,4 @@
-d// jenkinsfile
+// jenkinsfile
 pipeline{
     agent any
     environment {
