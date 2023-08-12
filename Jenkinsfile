@@ -29,7 +29,7 @@ pipeline{
         stage("Deploying to Rancher as single pod") {
             steps{
                 script {
-                    def kubeconfigPath = "cluster1.yaml"
+                    def kubeconfigPath = "swe645-a2-cluster.yaml"
                     env.KUBECONFIG = kubeconfigPath
                     sh "kubectl set image deployment/hw2-cluster-deploy container-0=srikar430/studentsurvey645:${BUILD_TIMESTAMP} -n hw2namespace"
                 }
