@@ -12,7 +12,11 @@ pipeline{
                 script {
 		    sh 'echo "Checkout..."'	
                     checkout scm
-
+		    sh 'rm -rf *.war'
+                    sh 'jar -cvf swe645-assignment-1.war .'
+                    sh 'echo $(BUILD_TIMESTAMP)'
+                    docker.withRegistry('',registryCredential)
+                    def img = docker.build('srikar430/studentsurvey645:$(BUILD_TIMESTAMP)')	
 
                 }
                     
