@@ -29,13 +29,13 @@ pipeline{
         stage("Deploying to Rancher as single pod") {
             steps{
                 script {
-                    sh "kubectl set image deployment/hw2-cluster-deploy container-0=srikar430/studentsurvey645:${BUILD_TIMESTAMP} -n jenkins-pipeline"
+                    sh "kubectl set image deployment/d3 container-0=srikar430/studentsurvey645:${BUILD_TIMESTAMP} -n jenkins-pipeline"
                 }
             }
         }
         stage("Deploying to Rancher as load balancer"){
             steps {
-                sh "kubectl set image deployment/hw2-cluster-deploy2 container-0=srikar430/studentsurvey645:${BUILD_TIMESTAMP} -n jenkins-pipeline"
+                sh "kubectl set image deployment/d3 container-0=srikar430/studentsurvey645:${BUILD_TIMESTAMP} -n jenkins-pipeline"
             }
         }
     }
